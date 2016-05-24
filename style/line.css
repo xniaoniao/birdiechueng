@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+body {
+  font-family: "Interstate-Extralight",Helvetica,Arial,sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+#sidebar {
+  background: #222;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .8);
+  height: 60Px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 11;
+}
+#sidebar-margin {
+  width: 200px;
+  height: 100%;
+  background: #e75b52;
+  float: left;
+}
+#oil-logo {
+  height: 100%;
+  line-height: 60px;
+  float: left;
+}
+#sidebar-margin img {
+  width: 30px;
+  height: 40px;
+  margin-left: 30px;
+  line-height: 60px;
+}
+#name {
+  float: left;
+  color: #fff;
+  margin-left: 20px;
+  height: 100%;
+  line-height: 60px;
+}
+#menu {
+  height: 100%;
+  float: left;
+  position: relative;
+}
+#menu a:nth-child(1) {
+  background: url(../img/header-icons.png) no-repeat -720px top;
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+}
+#menu p {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 0px;
+  display: block;
+  opacity: 0;
+}
+#menu #oil-logo:hover p {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 60px;
+  display: block;
+}
+#close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+}
+#close-btn {
+  background: url(../img/close.gif) no-repeat center center;
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #333;
+}
+#oil-bg {
+  position: fixed;
+  left: 0;
+  top: 0px;
+  background: url(../img/1.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  z-index: 0;
+  s}
+.content {
+  position: absolute;
+
+}
+#content-single {
+  width: auto;
+  right: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.content-single-before-load {
+  margin: 200px 0 0;
+}
+div#content-single .header.single-zoom {
+  width: 1200px;
+}
+div#content-single .header {
+  background: #f5f5f5;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 0 25px 25px 25px;
+  box-shadow: 0 -10px 8px 0 rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
+}
+div#content-single .header h1 {
+  padding: 50px 40px 10px 40px;
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 700;
+  font-family: 'Lato',sans-serif;
+  text-align: center;
+}
+div#content-single .header hr {
+  width: 80px;
+  border-color: #000;
+  margin-left: 530px;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+div#content-single .header h2 {
+  padding: 10px 40px 50px 40px;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #000;
+  font-family: 'Lato',sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+div#content-single .header .sub-cats {
+  background-color: #e75e50;
+  position: absolute;
+  left: -4px;
+  top: 10px;
+  margin: 0;
+  padding: 0 3px 2px 24px;
+}
+div#content-single .header .sub-cats > span {
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 0 8px;
+  cursor: default;
+  display: inline;
+}
+#topLogo {
+  position: absolute;
+  top: 300px;
+  min-height: 40px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1111;
+  width: 100%;
+  background: #f5f5f5;
+  display: none;
+}
+#topLogo > span {
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: 300;
+  margin-left: 30px;
+}
+
+div#content-single .content-elements {
+  background-color: #F5F5F5;
+  width: 100%;
+  height: auto;
+  margin: -100px auto 0 auto;
+  padding: 100px 0 0 0;
+}
+div#content-single .content-elements.only-photo {
+  padding: 40px 0 20px;
+}
+.intro, .show {
+  max-width: 900px;
+  height: 440px;
+  border: 1px solid #e7e7e7;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 150px auto;
+
+}
+
+.intro img {
+  width: 300px;
+  height: 400px;
+  float: left;
+  margin-right: 10px;
+}
+.intro > span {
+  color: #777777;
+  height: 100%;
+  letter-spacing: 2px;
+}
+.intro > span h3 {
+  margin-bottom: 10px;
+}
+.line {
+  max-width: 1200px;
+  height: 1px;
+  margin: 30px auto;
+  border: 1px solid #e7e7e7;
+}
+.show {
+  height: 600px;
+  margin-top: 0;
+  position: relative;
+  overflow: hidden;
+}
+#drawing > h2 {
+  color: #777777;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-top: 130px;
+  margin-left: 13em;
+  margin-bottom: 10px;
+}
+#show_box {
+  /*height: 180px;*/
+  position: absolute;
+  top:50%;
+  margin-top: -150px;
+}
+#show_box li {
+  width: 350px;
+  height: 300px;
+  float: left;
+  position: relative;
+  padding: 0 20px;
+
+}
+#show_box li > img {
+  width: 100%;
+  height: 100%;
+}
+
+#about {
+  text-indent: 5em;
+}
+#show_box .show-active {
+  transform:translateY(20px) scale(2.3, 1.3) translateX(5px);
+  transition: 1s all ease;
+  transform-origin: center center;
+}
+span.tips {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  padding: 15px 40px;
+  color: #777777;
+  background: #e7e7e7;
+  z-index: 11;
+}
+#text {
+  min-height: 30px;
+  min-width: 100px;
+  padding: 20px 10px;
+  position: absolute;
+  right: 120px;
+  bottom: 50px;
+  font-size: 20px;
+  background: #e7e7e7;
+  box-shadow: 0 0 2px rgba(0,0,0,.1);
+  transition: 1s all ease;
+}
+#person {
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #e7e7e7;
+  min-height: 650px;
+  /*padding: 10px;*/
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+#person-drawing {
+  width: 400px;
+  height: 100%;
+  min-height: 650px;
+  background: url(../img/lineDrawing/0.png) no-repeat;
+  transform-style: preserve-3d;
+  position: relative;
+  left: 50px;
+}
+
+#content-pic {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+  transform-origin: left center;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 1s all ease;
+
+}
+#content-pic div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#front {
+  backface-visibility: hidden;
+  background: url(../img/lineDrawing/0.png);
+  transform: translateZ(0.5px);
+  background-position: right center;
+}
+#back {
+  background: url(../img/lineDrawing/1.png);
+  transform: scale(-1, 1);
+  background-position: left center;
+
+}
+#next {
+  background: url(../img/lineDrawing/1.png) right top;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+#person {
+  margin-bottom: 130px;
+}
+footer {
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+footer img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}

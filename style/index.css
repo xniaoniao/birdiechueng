@@ -513,6 +513,17 @@ span.mask {
   width: 100%;
   height: 100%;
 }
+#full_page_info a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  visibility: hidden;
+
+}
+#full_page_info a:hover  .full-page-content {
+  padding: 10px 45px;
+}
 .full-page-info-wrapper {
   position: absolute;
   left: 0;
@@ -520,11 +531,10 @@ span.mask {
   width: 100%;
   height: 100%;
   transition: all .6s ease-in-out;
-  display: block;
 }
 @media (max-width: 900px), (max-height: 700px) {
   .full-page-info-wrapper .full-page-content {
-    margin-left: 30px;
+    margin-left: 50px;
     padding: 10px 30px;
   }
 }
@@ -541,7 +551,8 @@ span.mask {
   position: absolute;
   transform: translateY(-50%) translate3d(0, 0, 0);
 }
-.full-page-info-wrapper.section-loading h2, .full-page-info-wrapper.section-loading h3 {
+.full-page-info-wrapper.section-loading h2,
+.full-page-info-wrapper.section-loading h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -558,4 +569,181 @@ span.mask {
   .arrow-more {
     left: 30px;
   }
+}
+.fp-section {
+  box-sizing: border-box;
+  position: relative;
+}
+.section.active .section-bg, body.page-changing .section-bg {
+  -webkit-transform: scale(1);
+}
+.section-bg {
+  position: absolute;
+  left: 0;
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.full-page-bg {
+  left: 0%;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#oil {
+  background: url(../img/oilPaint.jpg) no-repeat center center;
+  background-size: cover;
+
+}
+#sketch {
+  background: url(../img/fullpage/sketch.jpg) no-repeat center center;
+  background-size: cover;
+}
+#line {
+  background: url(../img/fullpage/line.jpg) no-repeat center center;
+  background-size: cover;
+}
+#create {
+  background: url(../img/fullpage/create.jpg) no-repeat center center;
+  background-size: cover;
+}
+@media (max-width: 900px), (max-height: 700px) {
+  .full-page-info-wrapper {
+    margin-left: 30px;
+    padding: 10px 30px;
+  }
+}
+.full-page-info-wrapper .full-page-content, .header-logo-name a {
+  color: #555;
+  opacity: 0;
+  transition: .6s all ease;
+}
+
+.full-page-content {
+  background: #fff;
+}
+.center-vertical {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  padding: 10px 50px;
+  z-index: 111;
+}
+@media (max-width: 900px), (max-height: 700px) {
+  .arrow-more {
+    left: 30px;
+  }
+}
+
+.full-page-info-wrapper.section-loading h2,
+.full-page-info-wrapper.section-loading h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.arrow-more {
+  background: url(../img/arrow-more.png)no-repeat -22px center;
+  width: 59px;
+  height: 18px;
+  position: absolute;
+  bottom: -50px;
+}
+@media (max-width: 900px), (max-height: 700px) {
+  .full-page-info-wrapper h2 {
+    font-size: 30px !important;
+  }
+}
+.full-page h2{
+  line-height: 1.1em;
+  font-family: interstate-Extralight, Helvetica, Arial, sans-serif;
+}
+.full-page-info-wrapper h3, #open-all-projects .open-text, .header-logo-name {
+  font-family: "Lato",sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 580px), (max-height: 580px) {
+  body.page-loaded #fp-nav.right {
+    right: 10px;
+    overflow: hidden;
+    width: 9px;
+  }
+}
+
+@media (max-width: 580px), (max-height: 580px) {
+  #fp-nav ul li, .fp-slidesNav ul li {
+    margin: 7px 1px;
+  }
+}
+@media (max-width: 900px), (max-height: 700px) {
+  body.page-loaded #fp-nav.right {
+    right: 6px;
+  }
+}
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  opacity: 1;
+  right: 6px;
+  display: none;
+}
+#fp-nav ul li {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  margin: 10px 1px;
+}
+@media (max-width: 580px), (max-height: 580px) {
+  #fp-nav ul li, .fp-slidesNav ul li {
+    margin: 10px 1px;
+  }
+}
+
+#fp-nav ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+#fp-nav ul li a span {
+  background: #999;
+  position: absolute;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  border: 0;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  z-index: 1;
+  transition: .1s all ease;
+}
+#fp-nav ul li a:hover span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  left: 50%;
+  top: 50%;
+  margin: -5px 0 0 -5px;
+}
+#fp-nav ul li a span.active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0;
+  left: 50%;
+  top: 50%;
+  margin: -5px 0 0 -5px;
 }
