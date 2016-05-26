@@ -59,7 +59,7 @@ window.onload = function () {
     }, 30);
   }
 
-  function addEvent(obj, fn, ev) {
+  function addEvent(obj, ev, fn) {
     obj.addEventListener ? obj.addEventListener(ev, fn, false) :
         obj.attachEvent('on' + ev, fn);
   }
@@ -77,7 +77,7 @@ window.onload = function () {
       var toDown = ev.detail ? ev.detail > 0 : ev.wheelDelta < 0;
       var distance = ev.detail ? ev.detail : ev.wheelDelta;
 
-      if (Math.abs(distance) < 30) {
+      if (Math.abs(distance) < 20) {
         obj.preventDefault &&  obj.preventDefault();
         return false;
       }
@@ -231,13 +231,17 @@ window.onload = function () {
       isTransition = false;
     });
 
+
     var fullPageInto = document.querySelector('#full_page_info');
     function showFullPageContent(num) {
       var fullPageText = document.querySelectorAll('.full-page-content');
+      var allA = fullPageInto.getElementsByTagName('a');
       for (var i = 0; i < fullPageText.length; i++) {
         fullPageText[i].style.opacity = 0;
         fullPageText[i].style.left = 0;
         fullPageText[i].style.zIndex = 0;
+        allA[i].style.visibility = 'hidden';
+        // allA[i].style.zIndex = 0;
       }
       if (num == 0) {
         return;
@@ -247,7 +251,8 @@ window.onload = function () {
       fullPageText[num].style.transition = '1s all ease';
       fullPageText[num].style.zIndex = 100;
       fullPageText[num].style.visibility = 'visible';
-
+      allA[num].style.visibility = 'visible';
+      // allA[num].style.zIndex = 100;
 
     }
 
